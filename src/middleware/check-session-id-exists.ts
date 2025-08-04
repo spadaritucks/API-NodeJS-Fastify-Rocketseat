@@ -1,4 +1,3 @@
-import type { error } from "console";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
 export async function checkSessionIdExists(req: FastifyRequest, res: FastifyReply) {

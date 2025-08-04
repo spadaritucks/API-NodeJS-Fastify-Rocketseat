@@ -1,7 +1,7 @@
 import { db } from "../database.js"
 import type { FastifyInstance } from "fastify"
 import z from "zod"
-import { checkSessionIdExists } from "../../middleware/check-session-id-exists.js"
+import { checkSessionIdExists } from "../middleware/check-session-id-exists.js"
 
 
 export async function transactionsRoutes(app: FastifyInstance) {
