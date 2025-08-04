@@ -6,15 +6,15 @@ import { env } from "./env/index.js";
 
 
 
-export const config : Knex.Config = {
-    client: "sqlite3",
-    connection: {
-        filename:  env.DATABASE_URL
-    },
+export const config: Knex.Config = {
+    client: env.DATABASE_CLIENT,
+    connection: env.DATABASE_CLIENT === "sqlite" ? {
+        filename: env.DATABASE_URL
+    } : env.DATABASE_URL,
     useNullAsDefault: true,
-    migrations : {
-        extension : "ts",
-        directory : "./db/migrations"
+    migrations: {
+        extension: "ts",
+        directory: "./db/migrations"
     }
 }
 
