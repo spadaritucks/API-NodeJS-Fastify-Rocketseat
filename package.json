@@ -6,16 +6,20 @@
   "type": "module",
   "scripts": {
     "start": "tsx watch src/server.ts",
-    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js"
+    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
+    "test" : "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.1.0",
+    "@types/supertest": "^6.0.3",
     "sqlite3": "^5.1.7",
+    "supertest": "^7.1.4",
     "tsx": "^4.20.3",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
