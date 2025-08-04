@@ -1,0 +1,36 @@
+GET http://localhost:3333/transactions
+
+###
+
+GET http://localhost:3333/transactions/4dd4e738-0cae-41ff-b5e9-d99bfd06c8cc
+
+###
+
+
+GET http://localhost:3333/transactions/summary
+
+###
+
+POST http://localhost:3333/transactions
+Content-Type: application/json
+
+{
+  "title" : "Freelancer",
+  "amount" : 14000,
+  "type" : "debit"
+}
+
+###
+
+PUT http://localhost:3333/transactions/45848685-d201-440a-bd12-69fe16724396
+Content-Type: application/json
+
+{
+  "title" : "Uber",
+  "amount" : 40,
+  "type" : "debit"
+}
+
+###
+
+DELETE http://localhost:3333/transactions/4f79b679-4ed3-4fd2-9f58-16478ce2f442
